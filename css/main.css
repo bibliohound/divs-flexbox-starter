@@ -99,40 +99,83 @@ textarea {
 html {
   background-color: #333333;
   height: 100%;
+  width: 100%;
 }
 
 body {
+  color: white;
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 0.75em;
+  padding: 0em 2em;
   height: 100%;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
+header, footer {
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  font-weight: 700;
+  justify-content: flex-start;
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 0.15em solid white;
+}
+
+.flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.5em;
-  background-color: #333333;
-  height: 300px;
-  width: 30%;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-#div-2 {
-  border-left: 0.25em solid #bfbfbf;
-  border-right: 0.25em solid #bfbfbf;
-  padding-left: 1em;
+.flex-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5em;
+  height: 300px;
+}
+
+footer {
+  display: flex;
+  border-top: 0.15em solid white;
+}
+
+/*----------For Phones----------*/
+
+@media (max-width: 767px) {
+  #div-2 {
+    border-top: 0.15em solid white;
+    border-bottom: 0.15em solid white;
+  }
+}
+
+/*----------For Tablets----------*/
+
+@media (min-width: 768px) {
+  .flex-items {
+    width: 30%;
+  }
+
+  #div-2 {
+    border-left: 0.15em solid white;
+    border-right: 0.15em solid white;
+    padding: 1em;
+  }
+}
+
+/*----------For Desktops----------*/
+
+@media (min-width: 1200px){
+  body {
+    font-size: 1.25em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
 }
 
 
